@@ -1,0 +1,8 @@
+steps to the game
+
+1. random number should be chosen between 19-120 (COMPLETED)
+2. crystal value should be chosen between 1-12
+3. when user clicks on a crystal, crystal value should be added to the "current score"
+4. if users "current score" matches the "random number", user wins and +1 should be added to "win:"
+5. if users "current score" matches the "random number", user loses and +1 should be added to "losses:"
+6. when user wins or losses the game should restart, giving the user a new random number and new crystal values
