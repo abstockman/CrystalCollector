@@ -3,7 +3,7 @@ body {
 }
 
 #cclogo {
-  width: 80%;
+  width: 75%;
   height: auto;
   display: inline-block;
   margin: 50px 0px;
@@ -78,6 +78,16 @@ h1 {
   /* move the element down by 5px (it will stay in place because it's attached to the element that also moves up 5px) */
 }
 
+.instructionbox {
+  border-bottom: 2px solid black;
+  padding-bottom: 30px;
+}
+
+.scorebox {
+  border-bottom: 2px solid black;
+  padding-bottom: 30px;
+}
+
 .scoreboard {
   text-align: center;
   font-size: 3em;
@@ -103,4 +113,8 @@ h1 {
 
 .score {
   text-align: center;
+}
+
+.numberbox {
+  padding-top: 30px;
 }

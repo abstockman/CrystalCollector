@@ -16,11 +16,13 @@ $(document).ready(function() {
   var greenCrystal = getRandomNumber(1, 12);
   var yellowCrystal = getRandomNumber(1, 12);
   var blueCrystal = getRandomNumber(1, 12);
+  var redCrystal = getRandomNumber(1, 12);
 
   var newValues = function() {
     greenCrystal = getRandomNumber(1, 12);
     yellowCrystal = getRandomNumber(1, 12);
     blueCrystal = getRandomNumber(1, 12);
+    redCrystal = getRandomNumber(1, 12);
   };
 
   // $("#current-score").html(currentScore);
@@ -39,6 +41,12 @@ $(document).ready(function() {
 
   $("#blue-crystal").on("click", function() {
     currentScore += blueCrystal;
+    $("#current-score").html(currentScore);
+    updateScore();
+  });
+
+  $("#red-crystal").on("click", function() {
+    currentScore += redCrystal;
     $("#current-score").html(currentScore);
     updateScore();
   });
