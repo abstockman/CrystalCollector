@@ -7,45 +7,66 @@
   <link rel="stylesheet" href="assets/css/reset.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
   <link rel="stylesheet" href="assets/css/style.css">
-  <title>Crystal Collector</title>
+  <link href="https://fonts.googleapis.com/css?family=Ramabhadra" rel="stylesheet">
+  <title>Crystal Collector: The Game</title>
 </head>
 <body>
   <div class="container">
-    <div class="header col-lg-12">
-      <h1>Crystal Collector</h1>
+    <div class="header col-lg-12 text-center">
+      <!-- <h1>CRYSTAL COLLECTOR</h1> -->
+      <img id="cclogo" src="assets/images/cclogo.svg" alt="Crystal Collector">
     </div>
-    <div class="instructions col-lg-12">
-      <h2>Instructions</h2>
-      <p>You will be given a random number at the start of the game.</p>
-      <p>There are four srystals below. By clicking on a crystal you will add a specific amount of points to your total score.</p>
-      <p>You win the game by matching your total score to random number, you lose the game if your total score goes above the random number.</p>
-      <p>The value of each crystal is hidden from you until you click on it.</p>
-      <p>Each time when the game starts, the game will change the values of each crystal.</p>
-    </div>
-    <div class="row score-random-number">
-      <div class="random-number col-lg-6">
-        <p>Random Number: <span id="randomNumber"></span></p>
+    <!-- Large modal -->
+    <div class="text-center">
+      <button type="button" class="btn btn-primary hvr-float-shadow" data-toggle="modal" data-target=".bs-example-modal-lg">Instructions</button>
+      <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+        <div class="modal-dialog modal-lg" role="document">
+          <div class="modal-content">
+            <p>You will be given a random number at the start of the game.</p>
+            <p>There are four srystals below. By clicking on a crystal you will add a specific amount of points to your total score.</p>
+            <p>You win the game by matching your total score to random number, you lose the game if your total score goes above the random number.</p>
+            <p>The value of each crystal is hidden from you until you click on it.</p>
+            <p>Each time when the game starts, the game will change the values of each crystal.</p>
+          </div>
+        </div>
       </div>
-      <div class="score col-lg-6">
-        <p class="scoreboard">Wins: <span id="wins">0</span> Losses: <span id="losses">0</span></p>
+    </div>
+    <div class="row score">
+      <div class="score col-xs-6">
+        <p class="scoreboard">Wins: <span id="wins">0</span></p>
+      </div>
+      <div class="score col-xs-6">
+        <p class="scoreboard">Losses: <span id="losses">0</span></p>
+      </div>
+    </div>
+    <div class="random-number col-xs-6">
+      <div class="row">
+        <p class="titleheader">Random Number:</p>
+      </div>
+      <div class="row">
+        <p><span id=randomNumber></span></p>
+      </div>
+    </div>
+    <div class="score col-xs-6">
+      <div class="row">
+        <p class="titleheader">Your Number:</p>
+      </div>
+      <div class="row">
+       <p><span id="current-score">0</span></p>
       </div>
     </div>
     <div class="row crystals" >
       <div class="col-sm-2 col-sm-offset-3 col-xs-4 col-xs-offset-0">
-        <a id="green-crystal" href="#"><img class="img-responsive" src="assets/images/greencrystal.svg" alt="Green Crystal"></a>
+        <a id="green-crystal"><img class="img-responsive" src="assets/images/greencrystal.svg" alt="Green Crystal"></a>
       </div>
       <div class="col-sm-2 col-xs-4">
-        <a id="yellow-crystal" href="#"><img class="img-responsive" src="assets/images/yellowcrystal.svg" alt="Yellow Crystal"></a>
+        <a id="yellow-crystal"><img class="img-responsive" src="assets/images/yellowcrystal.svg" alt="Yellow Crystal"></a>
       </div>
       <div class="col-sm-2 col-xs-4">
-        <a id="blue-crystal" href="#"><img class="img-responsive" src="assets/images/bluecrystal.svg" alt="Blue Crystal"></a>
+        <a id="blue-crystal"><img class="img-responsive" src="assets/images/bluecrystal.svg" alt="Blue Crystal"></a>
       </div>
     </div>
-    <div class="row">
-      <div class="score col-lg-12">
-        <p id="score">Your current score is: <span id="current-score">0</span></p>
-      </div>
-    </div>
+
   </div>
 
 
