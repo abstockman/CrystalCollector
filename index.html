@@ -7,18 +7,74 @@
   <link rel="stylesheet" href="assets/css/reset.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
   <link rel="stylesheet" href="assets/css/style.css">
-  <link href="https://fonts.googleapis.com/css?family=Ramabhadra" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=VT323" rel="stylesheet">
   <title>Crystal Collector: The Game</title>
 </head>
 <body>
-  <div class="container">
-    <div class="header col-lg-12 text-center">
+
+  <div class="row nav-title">
+
+
+    <!-- HEADER -->
+    <div class="col-md-6">
+      <div class="header text-center">
       <!-- <h1>CRYSTAL COLLECTOR</h1> -->
-      <img id="cclogo" src="assets/images/cclogo.svg" alt="Crystal Collector">
+        CRYSTAL COLLECTOR
+        <button type="button" style="30px" data-toggle="modal" data-target=".bs-example-modal-lg"><span class="glyphicon glyphicon-info-sign"></span></button>
+        <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+          <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+              <button type="button" class="close text-center" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+              <p>You will be given a random number at the start of the game.</p>
+              <p>There are four crystals below. By clicking on a crystal you will add a specific amount of points to your total score.</p>
+              <p>You win the game by exactly matching your total score to the random number, you lose the game if your total score goes above the random number.</p>
+              <p>The value of each crystal is hidden from you until you click on it.</p>
+              <p>Each time when the game starts, the game will change the values of each crystal.</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
+
+
+    <!-- SCOREBOARD -->
+    <div class="col-md-6 scoreboard text-center">
+      Wins: <span id="wins">0</span> | Losses: <span id="losses">0</span>
+    </div>
+
+  </div>
+
+  <div class="container">
+
+    <!-- NUMBERS -->
+
+    <div class="row text-center">
+      <div class="numberbox">
+        <div class="random-number">
+          <p>Random Number: <span id=randomNumber></span></p>
+        </div>
+        <div class="current-score">
+          <p>Your Number: <span id="currentScore">0</span></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- CRYSTALS -->
+    <div class="row crystals text-center">
+      <a id="green-crystal" class="hvr-pop"><img class="img-responsive" src="assets/images/greencrystal.svg" alt="Green Crystal"></a>
+      <a id="yellow-crystal" class="hvr-pop"><img class="img-responsive" src="assets/images/yellowcrystal.svg" alt="Yellow Crystal"></a>
+      <a id="blue-crystal" class="hvr-pop"><img class="img-responsive" src="assets/images/bluecrystal.svg" alt="Blue Crystal"></a>
+      <a id="red-crystal" class="hvr-pop"><img class="img-responsive" src="assets/images/redcrystal.svg" alt="Red Crystal"></a>
+    </div>
+
+  </div>
+
+
+
+
     <!-- Large modal -->
-    <div class="instructionbox text-center">
-      <button type="button" class="btn btn-primary hvr-float-shadow" data-toggle="modal" data-target=".bs-example-modal-lg">Instructions</button>
+    <!-- <div class="instructionbox text-center">
+      <button type="button" class="hvr-float-shadow" data-toggle="modal" data-target=".bs-example-modal-lg"><span class="glyphicon glyphicon-info-sign"></span></button>
       <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
         <div class="modal-dialog modal-lg" role="document">
           <div class="modal-content">
@@ -30,49 +86,12 @@
           </div>
         </div>
       </div>
-    </div>
-    <div class="scorebox row score">
-      <div class="score col-sm-6">
-        <p class="scoreboard">Wins: <span id="wins">0</span></p>
-      </div>
-      <div class="score col-sm-6">
-        <p class="scoreboard">Losses: <span id="losses">0</span></p>
-      </div>
-    </div>
-    <div class="numberbox">
-      <div class="random-number col-sm-6">
-        <div class="row">
-          <p class="titleheader">Random Number:</p>
-        </div>
-        <div class="row">
-          <p><span id=randomNumber></span></p>
-        </div>
-      </div>
-      <div class="score col-sm-6">
-        <div class="row">
-          <p class="titleheader">Your Number:</p>
-        </div>
-        <div class="row">
-         <p><span id="current-score">0</span></p>
-        </div>
-      </div>
-    </div>
-    <div class="row crystals" >
-      <div class="col-xs-3">
-        <a id="green-crystal"><img class="img-responsive" src="assets/images/greencrystal.svg" alt="Green Crystal"></a>
-      </div>
-      <div class="col-xs-3">
-        <a id="yellow-crystal"><img class="img-responsive" src="assets/images/yellowcrystal.svg" alt="Yellow Crystal"></a>
-      </div>
-      <div class="col-xs-3">
-        <a id="blue-crystal"><img class="img-responsive" src="assets/images/bluecrystal.svg" alt="Blue Crystal"></a>
-      </div>
-      <div class="col-xs-3">
-        <a id="red-crystal"><img class="img-responsive" src="assets/images/redcrystal.svg" alt="Red Crystal"></a>
-      </div>
-    </div>
+    </div> -->
 
-  </div>
+
+
+
+
 
 
 <script

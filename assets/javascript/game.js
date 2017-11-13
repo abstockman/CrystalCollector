@@ -25,29 +25,29 @@ $(document).ready(function() {
     redCrystal = getRandomNumber(1, 12);
   };
 
-  // $("#current-score").html(currentScore);
+  // $("#currentScore").html(currentScore);
 
   $("#green-crystal").on("click", function() {
     currentScore += greenCrystal;
-    $("#current-score").html(currentScore);
+    $("#currentScore").html(currentScore);
     updateScore();
   });
 
   $("#yellow-crystal").on("click", function() {
     currentScore += yellowCrystal;
-    $("#current-score").html(currentScore);
+    $("#currentScore").html(currentScore);
     updateScore();
   });
 
   $("#blue-crystal").on("click", function() {
     currentScore += blueCrystal;
-    $("#current-score").html(currentScore);
+    $("#currentScore").html(currentScore);
     updateScore();
   });
 
   $("#red-crystal").on("click", function() {
     currentScore += redCrystal;
-    $("#current-score").html(currentScore);
+    $("#currentScore").html(currentScore);
     updateScore();
   });
 
@@ -59,7 +59,7 @@ $(document).ready(function() {
       randomNumber = getRandomNumber(19,120);
       $("#randomNumber").html(randomNumber);
       currentScore = 0;
-      $("#current-score").html(currentScore)
+      $("#currentScore").html(currentScore)
       newValues();
     }
     if (randomNumber < currentScore) {
@@ -69,7 +69,7 @@ $(document).ready(function() {
       randomNumber = getRandomNumber(19,120);
       $("#randomNumber").html(randomNumber);
       currentScore = 0;
-      $("#current-score").html(currentScore)
+      $("#currentScore").html(currentScore)
       newValues();
     }
 
